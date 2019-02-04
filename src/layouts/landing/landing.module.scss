@@ -1,0 +1,80 @@
+@import '../../styles/index.module.scss';
+
+.landing {
+    background-color: $secondary;
+    color: $primary;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: red;
+    min-width: 300px;
+    width: 100%;
+    height: calc(100% - 4vw);
+    max-width: 350px;
+    margin: 2vw;
+    background-color: $alternative;
+    &Wrapper {
+        list-style-type: none;
+        align-items: center;
+        height: 50%;
+        max-height: 250px;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &Link {
+        text-decoration: none;
+        color: $primary;
+        font-weight: bold;
+    }
+}
+
+.intro {
+    padding: 10vw (5vw * 0.75);
+    display: flex;
+    flex-direction: column;
+
+    &Heading {
+        font-size: 46px;
+        letter-spacing: -1px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    &Description {
+        font-weight: normal;
+        font-size: 27px;
+        margin-bottom: 55px;
+        letter-spacing: 0.2px;
+    }
+    
+    &Text {
+        font-size: 18px;
+        line-height: 24px;
+        height: 20vh;
+        overflow: hidden;
+    }
+}
+
+.optionBar {
+    display: flex;
+    width: 100%;
+    max-width: 525px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10vh;
+
+    &Or {
+        padding: 0 10px;
+        color: $primary;
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+}

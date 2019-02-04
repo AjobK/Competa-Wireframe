@@ -1,0 +1,32 @@
+@import '../../styles/index.module.scss';
+
+.quote {
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.person {
+    display: flex;
+}
+
+.picture {
+    display: block;
+    background-color: $primary;
+    min-width: 150px;
+    min-height: 150px;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.5vw;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 2.5vw;
+}
