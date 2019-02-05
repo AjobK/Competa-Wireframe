@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import { Landing, Polygons, Quote } from './layouts'
+import { Landing, Polygons, Quote, Contact, Footer } from './layouts'
 
 class App extends Component {
   render() {
@@ -9,6 +9,8 @@ class App extends Component {
         <Landing />
         <Polygons />
         <Quote />
+        <Contact />
+        <Footer />
       </>
     )
   }

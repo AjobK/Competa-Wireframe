@@ -10,9 +10,16 @@ class Quote extends Component {
             <div className={styles.picture} />
             <div className={styles.info}>
               <p className={styles.name}> Firstname Surname </p>
-              <p className={styles.says}> </p>
+              <p className={styles.says}> says </p>
             </div>
           </div>
+          <p className={styles.text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed rutrum imperdiet felis in vehicula. Donec et nibh magna. 
+            In vel ultricies enim. Nam id tincidunt libero, quis egestas 
+            dolor. Duis lacus nunc, auctor ut massa at, lacinia lacinia 
+            tortor. Morbi molestie velit eget sapien convallis imperdiet.
+          </p>
         </div>
       </section>
     )
