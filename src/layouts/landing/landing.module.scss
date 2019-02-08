@@ -3,9 +3,34 @@
 .landing {
     background-color: $secondary;
     color: $primary;
-    height: 75vh;
+}
+
+.wrapper {
     display: flex;
     align-items: center;
+    margin: 0 auto;
+    height: 75vh;
+    width: 100%;
+    max-width: $wrapper-width;
+    max-height: 700px;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    @include mobile {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .nav {
@@ -15,9 +40,9 @@
     background-color: red;
     min-width: 300px;
     width: 100%;
-    height: calc(100% - 4vw);
+    height: calc(100% - 60px);
     max-width: 350px;
-    margin: 2vw;
+    margin: 30px;
     background-color: $alternative;
     &Wrapper {
         list-style-type: none;
@@ -34,10 +59,30 @@
         color: $primary;
         font-weight: bold;
     }
+
+    @include mobile {
+        box-sizing: border-box;
+        flex-direction: row;
+        min-width: auto;
+        max-width: calc(100% - 60px);
+        padding: 11px;
+        height: auto;
+
+        &Wrapper {
+            justify-content: space-between;
+            width: 100%;
+            font-size: 1.2rem;
+            flex-direction: row;
+        }
+
+        &Item {
+            display: inline-flex;
+        }
+    }
 }
 
 .intro {
-    padding: 10vw (5vw * 0.75);
+    padding: 30px;
     display: flex;
     flex-direction: column;
 
@@ -49,6 +94,7 @@
     }
 
     &Description {
+        width: 100%;
         font-weight: normal;
         font-size: 27px;
         margin-bottom: 55px;
@@ -58,8 +104,10 @@
     &Text {
         font-size: 18px;
         line-height: 24px;
-        height: 20vh;
         overflow: hidden;
+        @include mobile {
+            max-height: 200px;
+        }
     }
 }
 
@@ -67,14 +115,34 @@
     display: flex;
     width: 100%;
     max-width: 525px;
+    margin-top: 40px;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10vh;
 
     &Or {
         padding: 0 10px;
         color: $primary;
         font-size: 24px;
         letter-spacing: -1px;
+    }
+
+    @include mobile-sm {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        > * {
+            margin-bottom: 20px;
+        }
+
+        &Description {
+            margin-bottom: 22px;
+        }
+
+        &Or {
+            display: none;
+        }
     }
 }

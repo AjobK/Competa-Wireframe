@@ -1,6 +1,8 @@
 @import '../../styles/index.module.scss';
 
 .polygons {
+    margin: 0 auto;
+    max-width: $wrapper-width;
     padding: 5vw 5vw calc(10vw + 5vw) 5vw;
 
     @include desktop {
@@ -39,11 +41,6 @@
     justify-content: space-between;
     font-size: 2vw;
 
-    @include desktop {
-        margin-bottom: -10rem;
-        font-size: 2rem;
-    }
-
     &Item {
         &.firstPoly {
             -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
@@ -60,32 +57,38 @@
         vertical-align: baseline;
         display: flex;
         align-items: flex-end;
-
         background-color: $secondary;
-        @include desktop {
-            padding: 2.5rem;
-            height: 30rem;
-        }
 
         &Text {
             padding-bottom: 0.5vw;
         }
-    }
-    &ItemLarge {
-        @extend .gridItem;
-        height: 31.5vw;
-        background-color: $secondary;
 
-        &Text {
-            @extend .gridItemText;
-            padding-bottom: 2vw;
-        }
-
-        @include desktop {
-            height: 31.5rem;
-
+        &Large {
+            @extend .gridItem;
+            height: 31.5vw;
+            background-color: $secondary;
+    
             &Text {
-                padding-bottom: 2rem;
+                @extend .gridItemText;
+                padding-bottom: 2vw;
+            }
+        }
+    }
+
+    @include desktop {
+        margin-bottom: -10rem;
+        font-size: 1.3rem;
+
+        &Item {
+            padding: 2.5rem;
+            height: 22.5rem;
+
+            &Large {
+                height: 24.5rem;
+
+                &Text {
+                    padding-bottom: 2.5rem;
+                }
             }
         }
     }

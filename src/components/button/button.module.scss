@@ -6,6 +6,7 @@
     max-height: 200px * 0.3;
     width: 100%; // Flex likes to change the size
     height: 25vw * 0.3; // of elements to fit inside a container
+    min-height: 3rem;
     background: none;
     align-items: center;
     justify-content: center;

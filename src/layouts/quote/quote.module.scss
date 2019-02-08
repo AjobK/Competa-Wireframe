@@ -5,8 +5,9 @@
 }
 
 .wrapper {
+    overflow: hidden;
     margin: 0 auto;
-    width: 80%;
+    max-width: $wrapper-width;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,4 +51,38 @@
     padding-bottom: 10vw;
     font-size: 1.2vw;
     line-height: 1.8vw;
+}
+
+@include desktop {
+    .quote {
+        padding: 5vw;
+    }
+    
+    .wrapper {
+        border-bottom: 0.35rem solid $secondary;
+    }
+    
+    .picture {
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+    
+    .info {
+        margin-left: 3.5rem;
+    }
+    
+    .says {
+        font-size: 2.5rem;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .text {
+        margin: 4rem;
+        padding-bottom: 10rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }

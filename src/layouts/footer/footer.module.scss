@@ -8,7 +8,8 @@
 }
 
 .wrapper {
-    width: calc(80% - 4vw * 2);
+    width: calc(100% - 60px);
+    max-width: $wrapper-width;
     margin: 0 auto;
     display: flex;
     align-items: center;
