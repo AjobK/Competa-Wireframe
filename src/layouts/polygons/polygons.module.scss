@@ -2,17 +2,31 @@
 
 .polygons {
     padding: 5vw 5vw calc(10vw + 5vw) 5vw;
+
+    @include desktop {
+        padding: 5rem 5rem calc(10rem + 5rem) 5rem;    
+    }
 }
 
 .wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
     border: 10px solid $secondary;
     padding: 4vw;
+
+    @include desktop {
+        padding: 4rem;
+    }
 }
 
 .title {
     font-size: 36px;
     text-align: center;
     margin-bottom: 36px * 2;
+
+    @include desktop {
+        font-size: 3rem;
+    }
 }
 
 
@@ -24,6 +38,12 @@
     display: flex;
     justify-content: space-between;
     font-size: 2vw;
+
+    @include desktop {
+        margin-bottom: -10rem;
+        font-size: 2rem;
+    }
+
     &Item {
         &.firstPoly {
             -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
@@ -40,7 +60,13 @@
         vertical-align: baseline;
         display: flex;
         align-items: flex-end;
+
         background-color: $secondary;
+        @include desktop {
+            padding: 2.5rem;
+            height: 30rem;
+        }
+
         &Text {
             padding-bottom: 0.5vw;
         }
@@ -48,9 +74,19 @@
     &ItemLarge {
         @extend .gridItem;
         height: 31.5vw;
+        background-color: $secondary;
+
         &Text {
             @extend .gridItemText;
             padding-bottom: 2vw;
+        }
+
+        @include desktop {
+            height: 31.5rem;
+
+            &Text {
+                padding-bottom: 2rem;
+            }
         }
     }
 }
