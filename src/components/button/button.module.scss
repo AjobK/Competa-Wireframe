@@ -1,15 +1,12 @@
 @import '../../styles/index.module.scss';
 
 .button {
-    display: flex;
     max-width: 200px;
     max-height: 200px * 0.3;
     width: 100%; // Flex likes to change the size
     height: 25vw * 0.3; // of elements to fit inside a container
     min-height: 3rem;
     background: none;
-    align-items: center;
-    justify-content: center;
     color: $primary;
     border: 3px solid $primary;
     letter-spacing: 1px;
